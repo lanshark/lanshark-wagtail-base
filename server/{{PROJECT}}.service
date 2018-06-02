@@ -1,0 +1,15 @@
+[Unit]
+Description=Gunicorn daemon for {{PROJECT}} Project
+Before=nginx.service
+After=network.target
+
+[Service]
+WorkingDirectory=/home/{{PROJECT_USER}}
+ExecStart=/home/{{PROJECT_USER}}/env/bin/gunicorn --name={{PROJECT}} --pythonpath=/home/{{PROJECT_USER}}/{{PROJECT}} --bind unix:/home/{{PROJECT_USER}}/gunicorn.socket --config /etc/gunicorn.d/{{PROJECT}}.py wsgi:application
+Restart=always
+SyslogIdentifier=gunicorn-{{PROJECT}}
+User={{PROJECT_USER}}
+Group=www-data
+
+[Install]
+WantedBy=multi-user.target
