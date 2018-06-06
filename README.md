@@ -1,6 +1,10 @@
 WagPress Project
 ================
 
+NOTE: This project has been moved to [GitLab](https://gitlab.com/lansharkconsulting/wagpress/wagpress-base) as of 6/4/2018.
+
+If you need to [open an issue](https://gitlab.com/lansharkconsulting/wagpress/wagpress-base/issues).
+
 The goal of the WagPress project is to build a suitable competitor to WordPress,
 using fully supported components of the Wagtail Content Management System.
 
